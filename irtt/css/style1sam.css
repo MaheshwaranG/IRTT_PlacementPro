@@ -1,0 +1,389 @@
+
+
+body{  
+  background-color:#ffffff;
+  
+}
+
+header {
+/*	position:fixed;  */
+	
+    background-color:#5500FF;
+    color:white;
+    text-align:center;
+    padding:20px;
+	margin:0px 5px 10px 5px;     
+	text-decoration:none;
+	letter-spacing:2px;
+	line-height:1.0;
+	/* background-image: url("img_tree.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+	background: #ffffff url("img_tree.png") no-repeat right top;	*/
+	/* border: width style color  */
+	border:2px solid lightgray;
+	outline-style:ridge;
+	font-weight:bold;
+	font-family:"Times New Roman";
+	font-size:25px;
+	
+}
+.view1 {
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.Department{
+	background-color:#5500FF;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+p {
+    font-family:Times;
+}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+p.thick {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+
+.tnr{
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* a:link {
+    background-color: yellow;
+}
+
+a:visited {
+    background-color: cyan;
+}
+
+a:hover {
+    background-color: lightgreen;
+}
+
+a:active {
+    background-color: hotpink;
+}  
+*/
+
+code,kbd,pre,samp
+{
+font-family:monospace,monospace;
+font-size:1em
+}
+sub
+{
+bottom:-0.25em
+}
+sup
+{
+top:-0.5em
+}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+}
+footer {
+     background-color:#5500FF;
+    color:white;
+    text-align:center;
+    padding:20px;
+	margin:0px 5px 10px 5px;     
+	text-decoration:none;
+	letter-spacing:2px;
+	line-height:1.0;
+	/* background-image: url("img_tree.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+	background: #ffffff url("img_tree.png") no-repeat right top;	*/
+	/* border: width style color  */
+	border:2px solid lightgray;
+	outline-style:ridge;
+	font-weight:bold;
+	font-family:"Times New Roman";
+	font-size:25px;
+}
+
+
+
+
+
+
+/* a:hover {
+    background-color: lightgreen;
+}
+.back{
+background-color:red;padding:2px;
+width=100%;
+}
+
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ ul li {
+    background: #cce5ff;
+    margin: 5px;
+}  
+
+.container {
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  /* Title */
+  /* Inputs */
+  /* Button */
+  /* Footer */
+  /* Alt Card */
+}
+
+/* link button style 
+a:link, a:visited {
+    color: white;
+    text-align: center;
+}
+
+a:hover, a:active {
+    background-color: red;
+} 
+*/
+
+/* list style
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+ul.aa {list-style-position:inside;}
+ul.bb {list-style-position:outside;}
+*/
+
+/* table design
+<div style="overflow-x:auto;">  // for over flow sample given blow
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+    </tr>
+    
+  </table>
+</div>
+
+design:
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:hover{background-color: #e2f0e0}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+sample inline header link:
+li {
+    display: inline;
+}
+a{
+background-color:red;padding:5px;
+}
+a:hover {
+    background-color: lightgreen;
+}
+.back{
+background-color:red;padding:2px;
+width=100%;
+}
+
+span {
+    display: block;
+    padding:20px;
+    background:#d1d1d1;
+    margin:2px;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+*/
+
+/* sample layout model:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
+*/
+
+
+
+
+/* 
+Here is all you need to know about relative file paths:
+
+    Starting with "/" returns to the root directory and starts there
+    Starting with "../" moves one directory backwards and starts there
+    Starting with "../../" moves two directories backwards and starts there (and so on...)
+    To move forward, just start with the first subdirectory and keep moving forward
+*/

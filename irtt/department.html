@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Login Form</title>
+  
+     <link rel="stylesheet" href="css/style.css">
+	 <link rel="stylesheet" href="css/style1.css">
+	 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	 <script src="/irtt/js/form1.js"></script>
+
+</head>
+
+<body>
+<header> IRTT PLACEMENT CELL </br></br>
+ DEPARTMENT LOGIN FORM
+
+</header>
+  
+<!-- Mixins-->
+<!-- Pen Title-->
+
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Login</h1>
+    <form id='login' name="login" action='validation/DepartmentCheck.php'  method='post' accept-charset='UTF-8'>
+      <div class="input-container">
+        User ID :  <input type="email" name="UserName" required="required" maxlength="30" />
+		
+        <div class="bar"></div>
+		<span id="e1" ></span>
+      </div>
+      <div class="input-container">
+        Password:  <input type="password" name="Password" maxlength="15" required="required"/>
+		<span id="e2"></span>
+        <div class="bar"></div>
+		
+      </div>
+      <div class="button-container">
+        <button><span>Go</span></button>
+      </div>
+    </form>
+  </div>
+ </div>
+ 
+<footer>
+Copyright@IRTT
+</footer>
+ 
+</body>
+</html>

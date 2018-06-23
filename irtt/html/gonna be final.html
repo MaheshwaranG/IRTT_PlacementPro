@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<div class="header">
+		<center><h2>Students Portal</h2></center>
+		</div>
+    <link rel="stylesheet" href="style.css">
+
+	</head>
+		 <script language="javascript" type="text/javascript">
+		 
+			function forceUpper(strInput) 
+				{
+					strInput.value=strInput.value.toUpperCase();
+				}​
+			function validateform()
+				{ 
+					var rollNumber=document.studentdataentry.rollNumber.value;
+					var rollNumberLength=rollNumber.length;
+					if (rollNumber==null || rollNumber=="")
+					{  
+						alert("Roll Number field is mandatory.");  
+						return false;
+					}
+					else if (rollNumberLength<"7" || rollNumberLength>"8")
+					{
+						alert("Roll Number can only be of length 7 or 8. Eg: 11IMT65 or 12IMT65L");
+						return false;
+					}
+			
+					var registrationNumber=document.studentdataentry.registrationNumber.value;
+					var registrationNumberLength=registrationNumber.length;
+					if (registrationNumber==null || registrationNumber=="")
+					{  
+						alert("Registration Number field is mandatory.");  
+						return false;
+					}
+					else if(registrationNumberLength!=12)
+					{
+						alert("Enter 12 Digit Numerical Registration Number only. Eg: 731111205065");
+						return false;
+					}
+					var firstName=document.studentdataentry.firstName.value;		
+					if (firstName==null || firstName=="")
+					{  
+						alert("First Name field is mandatory.");  
+						return false;
+					}
+					var lastName=document.studentdataentry.lastName.value;
+					if (lastName==null || lastName=="")
+					{  
+						alert("Last Name field is mandatory.");  
+						return false;
+					}
+					var gender=document.studentdataentry.gender.value;
+					if (gender==null || gender=="")
+					{  
+						alert("Gender must be choosen.");  
+						return false;
+					}
+					var fatherName=document.studentdataentry.fatherName.value;
+					if (fatherName==null || fatherName=="")
+					{  
+						alert("Father's Name field is mandatory.");  
+						return false;
+					}
+					var motherName=document.studentdataentry.motherName.value;
+					if (motherName==null || motherName=="")
+					{  
+						alert("Mother's Name field is mandatory.");  
+						return false;
+					}
+					var address=document.studentdataentry.address.value;
+					if (address==null ||address=="")
+					{  
+						alert("Address field is mandatory.");  
+						return false;
+					}
+					var pinCode=document.studentdataentry.pinCode.value;
+					var pinCodeLength=pinCode.length;
+					if (pinCode==null || pinCode=="")
+					{  
+						alert("Pincode field is mandatory.");  
+						return false;
+					}
+					else if(pinCodeLength!=6)
+					{
+						alert("Enter 6 Digit Numerical Pincode only. Eg: 638316");
+						return false;
+					}
+					var dob=document.studentdataentry.dob.value;
+					if (dob==null || dob=="")
+					{  
+						alert("Date of Birth field is mandatory.");  
+						return false;
+					}
+					var cgpa=document.studentdataentry.cgpa.value;
+					if (cgpa==null || cgpa=="")
+					{  
+						alert("CGPA field is mandatory.");  
+						return false;
+					}
+					var yearofpassingdegree=document.studentdataentry.yearofpassingdegree.value;
+					if (yearofpassingdegree==null || yearofpassingdegree=="")
+					{  
+						alert("Year of Passing Degree field is mandatory.");  
+						return false;
+					}
+					var diplamoPercentage=document.studentdataentry.diplamoPercentage.value;
+					if (diplamoPercentage==null || diplamoPercentage=="")
+					{  
+						alert("Diplamo Percentage field is mandatory.Those who didn't do Diplamo Enter value as 0");  
+						return false;
+					}
+					var yearofpassingdiplamo=document.studentdataentry.yearofpassingdiplamo.value;
+					if (yearofpassingdiplamo==null || yearofpassingdiplamo=="")
+					{  
+						alert("Year of Passing Diplamo field is mandatory.Those who didn't do Diplamo Enter value as 0");  
+						return false;
+					}
+					var hscpercentage=document.studentdataentry.hscpercentage.value;
+					if (hscpercentage==null || hscpercentage=="")
+					{  
+						alert("HSC Percentage field is mandatory.Those who didnot do HSC Enter value as 0");  
+						return false;
+					}
+					var yearofpassinghsc=document.studentdataentry.yearofpassinghsc.value;
+					if (yearofpassinghsc==null || yearofpassinghsc=="")
+					{  
+						alert("Year of Passing HSC field is mandatory.Those who didn't do HSC Enter value as 0");  
+						return false;
+					}
+					var sslcPercentage=document.studentdataentry.sslcPercentage.value;
+					if (sslcPercentage==null || sslcPercentage=="")
+					{  
+						alert("SSLC Percentage field is mandatory.");  
+						return false;
+					}
+					var yearofpassingsslc=document.studentdataentry.yearofpassingsslc.value;
+					if (yearofpassingsslc==null || yearofpassingsslc=="")
+					{  
+						alert("Year of Passing SSLC field is mandatory.");  
+						return false; 
+					}
+					var standingArrearcount=document.studentdataentry.standingArrearcount.value;
+					if (standingArrearcount==null || standingArrearcount=="")
+					{  
+						alert("Standing Arrear Count field is mandatory.");  
+						return false;
+					}
+					var historyofarrear=document.studentdataentry.historyofarrear.value;
+					if (historyofarrear==null || historyofarrear=="")
+					{  
+						alert("History of Arrear field is mandatory.");  
+						return false;
+					}
+					var contactNumber=document.studentdataentry.contactNumber.value;
+					if (contactNumber==null || contactNumber=="")
+					{  
+						alert("Contact Number field is mandatory.");  
+						return false;
+					}
+					var emailID=document.studentdataentry.emailID.value;
+					if (emailID==null || emailID=="")
+					{  
+						alert("E-mail ID field is mandatory.");  
+						return false;
+					} 
+					var company=document.studentdataentry.company.value;
+					if (company==null || company=="")
+					{  
+						alert("Company field is mandatory.");  
+						return false;
+					}
+				}	
+		
+			function check(e)
+			{
+ 
+					var keynum
+					var keychar
+					var numcheck
+ 
+
+					// For Internet Explorer
+					if (window.event)
+					{
+						keynum = e.keyCode;
+					}
+    
+					// For Netscape/Firefox/Opera
+					else if (e.which)
+					{
+						keynum = e.which;
+					}
+					keychar = String.fromCharCode(keynum);
+	
+					//List of special characters you want to restrict
+					if (keychar == "'" || keychar == "`" || keychar == "." || keychar =="!" || keychar =="@" || keychar =="#" || keychar =="$" || keychar =="%" || keychar =="^" || keychar =="&" || keychar =="*" || keychar =="(" || keychar ==")" || keychar =="-" || keychar =="_" || keychar =="+" || keychar =="=" || keychar =="/" || keychar =="~" || keychar =="<" || keychar ==">" || keychar =="," || keychar ==";" || keychar ==":" || keychar =="|" || keychar =="?" || keychar =="{" || keychar =="}" || keychar =="[" || keychar =="]" || keychar =="¬" || keychar =="£" || keychar =='"' || keychar =="\\") {
+					return false;
+					} 
+					else
+					{
+					return true;
+					}
+	
+	
+			}
+		 </script>
+	<body>
+
+	  
+	<center>
+		<table cellpadding="10px" >
+		<form name="studentdataentry" method="post" onsubmit="return validateform()">
+		<tr>
+        <td>Roll Number  </td>
+		<td><input type="text" name="rollNumber" placeholder="11IMT65" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)" minlength="7" maxlength="8" ></td>
+		</tr>
+		<tr>
+		<td>Registration Number  </td> 
+		<td> <input type="number" name="registrationNumber" placeholder="731111205065" min="731113205001" onkeypress="return check(event)" ></td>
+		</tr>
+		<tr>
+		<td>First Name  </td>
+		<td> <input type="text" name="firstName" placeholder="First Name" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)" maxlength="40"></td>
+		</tr>
+		<tr>
+		<td>Last Name   </td>
+		<td><input type="text" name="lastName" placeholder="Last Name" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)" maxlength="20" ></td>
+		</tr>
+		<tr>
+		<td>Branch    </td>
+		<td> <select required>
+						 <option value=""></option>
+						 <option value="AUTO">AUTOMOBILE ENGINEERING</option>
+						 <option value="CSE">COMPUTER SCIENCE AND ENGINEERING </option>
+						 <option value="CIVIL">CIVIL ENGINEERING</option>
+						 <option value="ECE">ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+						 <option value="EEE">ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+						 <option value="IT">INFORMATION TECHNOLOGY</option>
+						 <option value="MECH">MECHANICAL ENGINEERING</option>
+						 <option value="MCA">MASTER OF COMPUTER APPLICATION</option>
+						</select>
+		</td>
+		</tr>	
+		<tr>		
+		<td>Gender   </td>
+		<td> <input type="radio" name="gender" value="male"  > Male <input type="radio" name="gender" value="female"   > Female </td>
+		</tr>  	
+		<tr>	  
+		<td>Father Name  </td>
+		<td><input type="text" name="fatherName" placeholder="Kumar K" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)"  maxlength="40"></td>
+		</tr>
+		<tr>
+		<td>Mother Name  </td>
+		<td><input type="text" name="motherName" placeholder="Priya S" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)" maxlength="40"  ></td>
+		</tr>
+		<tr>
+		<td>Address  </td>
+		<td><input type="text" name="address" placeholder="445/D VOC Street Lakshmi Nagar Vasavi PO Erode DT" id="txt" onkeyup="return forceUpper(this);"  minlength="10" maxlength="75"  ></td>
+		</tr>
+		<tr>
+		<td>Pincode  </td>
+		<td><input type="number" name="pinCode" placeholder="638316"min="600000" onkeypress="return check(event)" ></td>
+		</tr>
+		<tr>
+		<td>Date Of Birth  </td>
+		<td><input type="date" name="dob"  ></td>
+		</tr>
+		<tr>
+		<td>CGPA  </td>
+		<td><input type="text" name="cgpa" placeholder="9.25" onkeypress="" ></td>
+		</tr>
+		<tr>
+		<td>Year of Passing Degree</td>
+		<td><input type="number" name="yearofpassingdegree" placeholder="2017" onkeypress="return check(event)" min="2017" maxlength="4" ></td>
+		</tr>
+		<tr>
+		<td>Diplamo Percentage  </td>
+		<td><input type="text" name="diplamoPercentage" placeholder="99.5" onkeypress=""  ></td>
+		</tr>
+		<tr>
+		<td>Year of Passing Diplamo  </td>
+		<td><input type="number" name="yearofpassingdiplamo" placeholder="2013" onkeypress="return check(event)" min="2013"  maxlength="4" ></td>
+		</tr>
+		<tr>
+		<td>HSC Percentage  </td>
+		<td><input type="text" name="hscpercentage" placeholder="90.5" onkeypress=""></td>
+		</tr>
+		<tr>
+		<td>Year of Passing HSC </td>
+		<td><input type="number" name="yearofpassinghsc" placeholder="2010" onkeypress="return check(event)" min="2010"  maxlength="4" ></td>
+		</tr>
+		<tr>
+		<td>SSLC Percentage  </td>
+		<td><input type="text" name="sslcPercentage" placeholder="92.8" onkeypress=""  ></td>
+		</tr>
+		<tr>
+		<td>Year of Passing SSLC </td>
+		<td><input type="number" name="yearofpassingsslc" placeholder="2008" onkeypress="return check(event)" min="2008"  maxlength="4" ></td>
+		</tr>
+		<tr>
+		<td>Standing Arrear Count  </td>
+		<td><input type="number" name="standingArrearcount" placeholder="2" onkeypress="return check(event)" min="0" minlength="1"  maxlength="2" ></td>
+		</tr>
+		<tr>
+		<td>History of Arrear  </td>
+		<td><input type="number" name="historyofarrear" placeholder="2" onkeypress="return check(event)" min="0" minlength="1" maxlength="2" ></td>
+		</tr>
+		<tr>
+		<td>Contact Number  </td>
+		<td><input type="number" name="contactNumber" placeholder="8877665500" onkeypress="return check(event)"  maxlength="10" ></td>
+		</tr>
+		<tr>
+		<td>E-Mail ID  </td>
+		<td><input type="email" name="emailID" placeholder="name225@mail.com"  ></td>
+		</tr>
+		<tr>
+		<td>Placement Status  </td>
+		<td><select required name="PLACEMENT STATUS">
+			<option value=""></option>
+			<option value="Y" >INTERESTED</option>
+			<option value="P" >PLACED</option>
+			<option value="HS">HIGHER STUDIES</option>
+			<option value="NI">NOT WILLING</option>
+			</select>
+		</td>
+		</tr>	
+		<tr>  
+		<td>Comapany  </td>
+		<td><input type="text" name="company" placeholder="TCS" id="txt" onkeyup="return forceUpper(this);" onkeypress="return check(event)"  ></td>
+		</tr>
+		<tr>
+		<td> <input type="submit" value="Submit"> </td>
+		<td> <input type="reset"> </td>
+		</td>
+		</form>
+		</table>
+		</center>
+		</div>
+	</body>
+</html>

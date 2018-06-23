@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+		<html>
+			 <head>
+					<title> STUDENTS DATA ENTRY FORM </title>
+						
+						<meta name="viewport" content="width=device-width">
+						<link rel="stylesheet" href="/irtt/css/formstyle.css">
+						<link rel="stylesheet" href="/irtt/css/link.css">	
+							
+						
+						<link rel='stylesheet' href='form1style.css'>
+
+						<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+						<script src="/irtt/js/form1.js"></script>
+</head>
+<?php
+session_start();
+//require("dbclass.php");
+if(!isset($_SESSION['id']) && !isset($_SESSION['year']) && !isset($_SESSION['Reg_no'])  && !isset($_POST['firstname'])){
+	header("Location: /irtt/validation/ErrorPage.php");
+	$_SESSION['logtest']=false;
+	session_destroy();
+}
+else if(isset($_POST['firstname'])){
+/*	
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "datas";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+
+
+if ($conn->multi_query($sql) === TRUE) {
+    echo "New records created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();*/
+?>
+	
+?>
+<body>
+<header> IRTT PLACEMENT CELL </br></br>
+ DEPARTMENT CORNER
+</header>
+
+<ul class="tags">
+   <li><a href="/irtt/validation/DepartmentLogin.php" class="tag">Home</a></li>
+  <li><a href="/irtt/validation/Select.php" class="tag">Update Student Info</a></li>
+  <li><a href="/irtt/validation/Select.php" class="tag">Student Registration</a></li>
+  <li><a href="/irtt/validation/OperationSelect.php" class="tag">Selection Process</a></li>
+  <li><a href="/irtt/validation/Contact.php" class="tag">Contacts</a></li>
+  <li><a href="/irtt/validation/StudentLogout.php" class="tag">Logout</a></li>
+</ul>
+<?php
+$_SESSION['firstname'] = $_POST['firstname'];
+	$sqlq = "create table datas";
+	//echo $_SESSION['database'] ;
+	$DB = new db;
+	if($DB->Connection($_SESSION['year'])){
+			if($DB->insertQuery($sqlq )){
+?>
+<div style = "padding:20px;margin:50px;background-color:green;color:white;align:center;text-align:center;font-size:12px">
+<h1 id="id1"> Successfully Inserted Student data in the database </h1>
+</div>
+<?php
+				
+			}
+			else{
+				?>
+				<div style = "padding:20px;margin:50px;background-color:green;color:white;align:center;text-align:center;font-size:12px">
+				<h1 id="id1"> Query Error  </h1>
+				</div>
+<?php 
+			}
+?>
+<div style = "padding:20px;margin:50px;background-color:green;color:white;align:center;text-align:center;font-size:12px">
+				<h1 id="id1"> Query Error  </h1>
+				</div>
+<?php
+	}
+?>	
+<div style = "padding:20px;margin:50px;background-color:green;color:white;align:center;text-align:center;font-size:12px">
+				<?php 
+				echo $_POST['rollnumber']."\n";
+				echo $_POST['firstname']."\n";
+				echo $_POST['lastname']."\n";
+				echo $_POST['branch']."\n";
+				echo $_POST['gender']."\n";
+				echo $_POST['fathername']."\n";
+				echo $_POST['mothername']."\n";
+				echo $_POST['address']."\n";
+				echo $_POST['pincode']."\n";
+				echo $_POST['dob']."\n";
+				echo $_POST['cgpa']."\n";
+				echo $_POST['yopug']."\n";
+				echo $_POST['hsc']."\n";
+				echo $_POST['yophsc']."\n";
+				echo $_POST['dip']."\n";
+				echo $_POST['yopdip']."\n";
+				echo $_POST['sslc']."\n";
+				echo $_POST['yopsslc']."\n";
+				echo $_POST['SA']."\n";
+				echo $_POST['HA']."\n";
+				echo $_POST['phone']."\n";
+				echo $_POST['Aphone']."\n";
+				echo $_POST['email']."\n";
+				echo $_POST['placementstatus']."\n";
+				?>
+				</div>
+<div>
+<footer>
+Copyright@IRTT
+</footer>
+</div>	
+<?php
+}
+?>					
+					</body>
+		</html>			
